@@ -1,6 +1,6 @@
 # Read ME - TurnkeyAssesment
 
-The Assessment was aimed to access problem solving skills of candidates, how conversant they are with the said languages (Java and Sql) and code optimizaiong.
+The Assessment was aimed to assess problem solving skills of candidates, how conversant they are with the said languages (Java and Sql) and code optimizaiong.
 It also tested the debugging skills of the candidates.
 
 ## - Fibonacci Sequence Question
