@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Stream;
+import java.util.Optional;
 
 public class GetLargestDifference {
     public static void main(String[] args) {
@@ -16,7 +16,7 @@ public class GetLargestDifference {
 
    //I use functional programming concept,using streams to retrieve distinct list along with the largest and smallest number and find the difference
     public static int getLargestDifference(List<Integer> list){
-        Optional<Integer> smallestOptional = list.stream().distinct().min(Integer::compareTo);
+        Optional<Integer> smallestOptional = list.stream().distinct().min(Integer::compareTo);//used optionals so that i can check for an empty list to prevent run-time crash
         Optional<Integer> largestOptional = list.stream().distinct().max(Integer::compareTo);
         int smallestNumber = 0;
         int largestNumber = 0;
