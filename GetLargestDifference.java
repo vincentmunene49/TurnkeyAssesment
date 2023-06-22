@@ -16,8 +16,16 @@ public class GetLargestDifference {
 
    //I use functional programming concept,using streams to retrieve distinct list along with the largest and smallest number and find the difference
     public static int getLargestDifference(List<Integer> list){
-        int smallestNumber = list.stream().distinct().min(Integer::compareTo).orElseThrow();
-        int largestNumber = list.stream().distinct().max(Integer::compareTo).orElseThrow();
+        Optional<Integer> smallestOptional = list.stream().distinct().min(Integer::compareTo);
+        Optional<Integer> largestOptional = list.stream().distinct().max(Integer::compareTo);
+        int smallestNumber = 0;
+        int largestNumber = 0;
+        if (smallestOptional.isPresent() && largestOptional.isPresent()) {
+            smallestNumber = smallestOptional.get();
+            largestNumber = largestOptional.get();
+        } else {
+            System.out.println("List is empty or contains no distinct elements.");
+        }
         return largestNumber-smallestNumber;
     }
 }
