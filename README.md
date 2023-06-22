@@ -20,7 +20,7 @@ Each Fibonacci number is calculated only once and then stored for future referen
 
 ### The question required the candidate to write a function that, given a list returns the largest difference between any two number in the list
 
-I approached this question using java's functional programming paradigm. I used streams which has various methods such as distinct(), to take care of the similar elements in the list.
+I approached this question using java's functional programming paradigm. I used streams which has various methods such as distinct(), to take care of the similar elements in the list. I also used Optionals to check for absence or presence of elements to take care for an empty list to prevent premature run-time crush.
 
 I any given list, the difference between the highest number and the smallest number in the list will produce the highest difference. So  I used streams to obtain the largest number and the smallest number and  got the difference, which was the required return of the function. The program has a linear time complexity O(n).
 
