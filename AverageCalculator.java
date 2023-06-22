@@ -5,7 +5,8 @@ int total = 0;
 for (int num : numbers) {
 total += num;
 }
-/*The problem with the code lies in this line. The operator / performs a floating point division.This means that if both total and numbers.length are integers, the operation will be an integer division causing premature truncation of the final answer. To correct this, type cast either total or numbers.length to double since integer by double -or vise-versa- division produces a double.(or a float) */
+/*The problem with the code lies in this line: double average = total/number.length. The operator / performs a floating point division.This means that if both total and numbers.length are integers, the operation will be an integer division causing premature truncation of the final answer.
+To correct this, type cast either total or numbers.length to double since integer by double -or vise-versa- division produces a double.(or a float). After correction we have:*/
 double average = (double)total / numbers.length;
 return average;
 }
